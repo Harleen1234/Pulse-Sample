@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/PrimaryColor"
+        android:id="@+id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_centerInParent="true"
+                android:text="Places        "
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textAlignment="gravity"
+                android:gravity="center"
+
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+
+
+                />
+        </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#edeeee">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/places_textbox"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:textSize="@dimen/places_heading2_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/r1">
+        <ListView
+            android:id="@+id/listViewPlaces"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+
+
+            >
+        </ListView>
+
+
+        <Button
+            android:id="@+id/placebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_loc_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/listViewPlaces"
+            android:layout_marginTop="20dp"
+
+
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placesText1"
+            android:layout_below="@+id/placebtn"
+            android:layout_alignStart="@+id/placebtn"
+            android:layout_alignLeft="@+id/placebtn"
+            android:textAlignment="gravity"
+            android:id="@+id/placestext"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/places_heading2_size"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

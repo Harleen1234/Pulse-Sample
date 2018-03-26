@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@color/PrimaryColor"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="Add Place"
+                android:textAlignment="gravity"
+                android:textAllCaps="false"
+
+                android:textColor="#ffffff"
+                android:textSize="@dimen/title_textsize" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="25">
+
+        <EditText
+            android:id="@+id/placename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e9ebec"
+            android:drawableLeft="@drawable/place1_icon"
+            android:drawablePadding="10dp"
+            android:hint="Enter Place Name (eg House,Office etc)"
+            android:lines="1"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColorHint="#545a5d"
+            android:textSize="@dimen/add_place_edittext_size" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/placename"
+            android:layout_alignStart="@+id/placename"
+            android:layout_below="@+id/placename"
+            android:layout_centerInParent="true"
+            android:gravity="left"
+
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Enter an address or drag the map to get your location"
+            android:textAlignment="gravity"
+            android:textColor="#545a5d"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/LocAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview"
+            android:background="#e9ebec"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="10dp"
+            android:hint="Loading Address..."
+            android:lines="1"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColorHint="#545a5d"
+            android:textSize="@dimen/add_place_edittext_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="75">
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/done_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:drawable/alert_dark_frame"
+            android:text="Done Adding"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

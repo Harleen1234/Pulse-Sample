@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:background="@drawable/bg"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="55"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+        
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+           android:textAlignment="center"
+            android:textColor="#ffffff"
+          android:paddingBottom="15dp"
+            android:background="@android:color/transparent"
+            android:lines="1"
+            android:singleLine="true"
+            android:drawableLeft="@drawable/user"
+            android:drawablePadding="20dp"
+            android:textColorHint="#ffffff"
+
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+            android:layout_below="@+id/username"
+            />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:paddingBottom="15dp"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/lock"
+            android:drawablePadding="20dp"
+            android:textAlignment="gravity"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/username"
+            android:textColorHint="#ffffff"
+
+            android:background="@android:color/transparent"
+            android:layout_marginTop="20dp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+            android:layout_below="@+id/password"
+          />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="40dp"
+
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/login"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <Button
+            android:id="@+id/google_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/google"
+            android:layout_alignParentEnd="true"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget Password?"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/google_login"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:textSize="18dp"/>
+
+
+
+    </RelativeLayout>
+</LinearLayout>
